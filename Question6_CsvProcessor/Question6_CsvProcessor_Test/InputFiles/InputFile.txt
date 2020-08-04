@@ -1,0 +1,9 @@
+﻿UserId,LastName,FirstName,InsuranceCompany,Version
+user1,Smith,Bob1,CompanyAlpha,1
+user1,Smith,Bob2,CompanyAlpha,2
+user1,Smith,Bob3,CompanyAlpha,3
+user2,Jones,Bill,CompanyAlpha,10
+user1,Washington,George,CompanyBeta,1
+user2,Jefferson,Tom,CompanyBeta,1
+user3,Jefferson,William,CompanyBeta,1
+user4,Jefferson,Aaron,CompanyBeta,1

@@ -1,0 +1,74 @@
+.root-container {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-container {
+  width: 600px;
+}
+
+#registration-form {
+  margin-top: 2em;
+}
+
+.field-errors {
+  color: red;
+  font-size: 0.85em;
+  margin-left: 1em;
+  margin-bottom: 1em;
+}
+
+#first-name {
+  width: 225px;
+}
+
+#last-name {
+  width: 225px;
+}
+
+#npi-number {
+  width: 150px;
+}
+
+#street-one {
+  width: 350px;
+}
+
+#street-two {
+  width: 350px;
+}
+
+#city {
+  width: 175px;
+}
+
+#state {
+  width: 75px;
+}
+
+#zip {
+  width: 125px;
+}
+
+#phone {
+  width: 150px;
+}
+
+#email {
+  width: 300px;
+}
+
+.state-zip-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.button-container {
+  margin-top: 2em;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}

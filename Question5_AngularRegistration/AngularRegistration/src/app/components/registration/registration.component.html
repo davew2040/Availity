@@ -1,0 +1,149 @@
+<div class="root-container">
+  <div class="content-container">
+    <h1>Provider Registration</h1>
+
+    <hr/>
+
+    <form id="registration-form" [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+      <div class="field-block">
+        <div class='field-input'>
+          <mat-form-field id="first-name">
+            <input id="inputFirstName" class="form-control" [formControlName]="FormKeys.FirstName" [placeholder]="GetFieldLabel(FormKeys.FirstName)" matInput>
+          </mat-form-field>
+        </div>
+        <div class="field-errors" *ngIf="ShouldShowFieldErrors(FormKeys.FirstName)">
+          <div *ngFor="let error of GetFieldErrors(FormKeys.FirstName)">
+            {{ error }}
+          </div>
+        </div>
+      </div>
+
+      <div class="field-block">
+        <div class='field-input'>
+          <mat-form-field id="last-name">
+            <input class="form-control" [formControlName]="FormKeys.LastName" [placeholder]="GetFieldLabel(FormKeys.LastName)" matInput>
+          </mat-form-field>
+        </div>
+        <div class="field-errors" *ngIf="ShouldShowFieldErrors(FormKeys.LastName)">
+          <div *ngFor="let error of GetFieldErrors(FormKeys.LastName)">
+            {{ error }}
+          </div>
+        </div>
+      </div>
+
+
+      <div class="field-block">
+        <div class='field-input'>
+          <mat-form-field id="npi-number">
+            <input class="form-control" [formControlName]="FormKeys.NpiNumber" [placeholder]="GetFieldLabel(FormKeys.NpiNumber)" matInput maxlength="10">
+          </mat-form-field>
+        </div>
+        <div class="field-errors" *ngIf="ShouldShowFieldErrors(FormKeys.NpiNumber)">
+          <div *ngFor="let error of GetFieldErrors(FormKeys.NpiNumber)">
+            {{ error }}
+          </div>
+        </div>
+      </div>
+
+      <div class="field-block">
+        <div class='field-input'>
+          <mat-form-field id="street-one">
+            <input class="form-control" [formControlName]="FormKeys.StreetOne" [placeholder]="GetFieldLabel(FormKeys.StreetOne)" matInput>
+          </mat-form-field>
+        </div>
+        <div class="field-errors" *ngIf="ShouldShowFieldErrors(FormKeys.StreetOne)">
+          <div *ngFor="let error of GetFieldErrors(FormKeys.StreetOne)">
+            {{ error }}
+          </div>
+        </div>
+      </div>
+
+      <div class="field-block">
+        <div class='field-input'>
+          <mat-form-field id="street-two">
+            <input class="form-control" [formControlName]="FormKeys.StreetTwo" [placeholder]="GetFieldLabel(FormKeys.StreetTwo)" matInput>
+          </mat-form-field>
+        </div>
+        <div class="field-errors" *ngIf="ShouldShowFieldErrors(FormKeys.StreetTwo)">
+          <div *ngFor="let error of GetFieldErrors(FormKeys.StreetTwo)">
+            {{ error }}
+          </div>
+        </div>
+      </div>
+
+      <div class="state-zip-container">
+        <div class="field-block">
+          <div class='field-input'>
+            <mat-form-field id="city">
+              <input class="form-control" [formControlName]="FormKeys.City" [placeholder]="GetFieldLabel(FormKeys.City)" matInput>
+            </mat-form-field>
+          </div>
+          <div class="field-errors" *ngIf="ShouldShowFieldErrors(FormKeys.City)">
+            <div *ngFor="let error of GetFieldErrors(FormKeys.City)">
+              {{ error }}
+            </div>
+          </div>
+        </div>
+
+        <div class="field-block">
+          <mat-form-field id="state">
+            <mat-label>{{ GetFieldLabel(FormKeys.State) }}</mat-label>
+            <mat-select [formControlName]="FormKeys.State">
+              <mat-option *ngFor="let state of stateAbbreviations" [value]="state">
+                {{ state }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <div class="field-errors" *ngIf="ShouldShowFieldErrors(FormKeys.State)">
+            <div *ngFor="let error of GetFieldErrors(FormKeys.State)">
+              {{ error }}
+            </div>
+          </div>
+        </div>
+
+        <div class="field-block">
+          <div class='field-input'>
+            <mat-form-field id="zip">
+              <input class="form-control" [formControlName]="FormKeys.Zip" [placeholder]="GetFieldLabel(FormKeys.Zip)" matInput maxlength="5">
+            </mat-form-field>
+          </div>
+          <div class="field-errors" *ngIf="ShouldShowFieldErrors(FormKeys.Zip)">
+            <div *ngFor="let error of GetFieldErrors(FormKeys.Zip)">
+              {{ error }}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="field-block">
+        <div class='field-input'>
+          <mat-form-field id="phone">
+            <input class="form-control" [formControlName]="FormKeys.Phone" [placeholder]="GetFieldLabel(FormKeys.Phone)" matInput>
+          </mat-form-field>
+        </div>
+        <div class="field-errors" *ngIf="ShouldShowFieldErrors(FormKeys.Phone)">
+          <div *ngFor="let error of GetFieldErrors(FormKeys.Phone)">
+            {{ error }}
+          </div>
+        </div>
+      </div>
+
+      <div class="field-block">
+        <div class='field-input'>
+          <mat-form-field id="email">
+            <input class="form-control" [formControlName]="FormKeys.Email" [placeholder]="GetFieldLabel(FormKeys.Email)" matInput>
+          </mat-form-field>
+        </div>
+        <div class="field-errors" *ngIf="ShouldShowFieldErrors(FormKeys.Email)">
+          <div *ngFor="let error of GetFieldErrors(FormKeys.Email)">
+            {{ error }}
+          </div>
+        </div>
+      </div>
+
+      <div class="button-container">
+        <button class="app-button" mat-raised-button color="primary" type="submit" [disabled]="!canSubmit()">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>

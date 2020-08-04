@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Question6_CsvProcessor": {
+      "commandName": "Project",
+      "commandLineArgs": "I:\\Projects\\interview\\Availity\\Question6_CsvProcessor\\Question6_CsvProcessor_Test\\InputFiles\\InputFile.txt I:\\Projects\\interview\\Availity\\Question6_CsvProcessor\\Question6_CsvProcessor\\bin\\Debug\\netcoreapp3.1\\output"
+    }
+  }
+}
